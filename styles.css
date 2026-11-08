@@ -1,15 +1,15 @@
 :root {
-  --bg: #F8F5FC;
-  --bg-card: #EDE4F7;
-  --bg-card-alt: #E4D8F2;
-  --ink: #3A2E42;
-  --ink-soft: #7A6E88;
-  --accent: #7E5CA8;
-  --accent-dark: #644789;
-  --accent-soft: #E9DFF5;
-  --sage: #8C9E7C;
-  --sage-soft: #E7EDE1;
-  --line: #DCCFEC;
+  --bg: #F7F9F3;
+  --bg-card: #EAF2E2;
+  --bg-card-alt: #DDEAD2;
+  --ink: #263022;
+  --ink-soft: #5F6B58;
+  --accent: #3F7A35;
+  --accent-dark: #2F5E28;
+  --accent-soft: #E3EFD9;
+  --warm: #B08A45;
+  --warm-soft: #F5EEDF;
+  --line: #D3E2C6;
   --max: 1040px;
 }
 
@@ -164,7 +164,7 @@ header {
   border: none;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.15s ease;
-  box-shadow: 0 4px 14px rgba(168, 66, 92, 0.25);
+  box-shadow: 0 4px 14px rgba(63, 122, 53, 0.25);
 }
 
 .btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
@@ -228,7 +228,7 @@ h2 {
   background: white;
   border-radius: 20px;
   padding: 30px 26px;
-  box-shadow: 0 3px 12px rgba(58, 46, 40, 0.06);
+  box-shadow: 0 3px 12px rgba(38, 48, 34, 0.06);
   position: relative;
 }
 
@@ -255,7 +255,7 @@ h2 {
   border-radius: 22px;
   padding: 34px 32px;
   margin-bottom: 36px;
-  box-shadow: 0 3px 14px rgba(58, 46, 40, 0.07);
+  box-shadow: 0 3px 14px rgba(38, 48, 34, 0.07);
 }
 
 .price-block h3 {
@@ -294,8 +294,8 @@ table.price-table td:last-child {
 }
 
 .price-note {
-  background: var(--sage-soft);
-  border-left: 4px solid var(--sage);
+  background: var(--warm-soft);
+  border-left: 4px solid var(--warm);
   padding: 16px 20px;
   font-size: 0.96rem;
   color: var(--ink);
@@ -303,9 +303,43 @@ table.price-table td:last-child {
   border-radius: 0 12px 12px 0;
 }
 
-.price-note.pink {
+.price-note.accent {
   background: var(--accent-soft);
   border-left-color: var(--accent);
+}
+
+.service-desc {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.conditions-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.conditions-list li {
+  padding: 11px 0 11px 30px;
+  border-bottom: 1px dashed var(--line);
+  position: relative;
+}
+
+.conditions-list li:last-child { border-bottom: none; }
+
+.conditions-list li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 17px;
+  width: 12px;
+  height: 7px;
+  border-left: 3px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
+  transform: rotate(-45deg);
 }
 
 /* Schedule table */
@@ -319,7 +353,7 @@ table.price-table td:last-child {
   background: white;
   border-radius: 20px;
   padding: 28px;
-  box-shadow: 0 3px 12px rgba(58, 46, 40, 0.06);
+  box-shadow: 0 3px 12px rgba(38, 48, 34, 0.06);
 }
 
 .schedule-card h3 {
@@ -359,7 +393,7 @@ table.price-table td:last-child {
   border-radius: 18px;
   padding: 20px 24px;
   margin-bottom: 18px;
-  box-shadow: 0 3px 10px rgba(58, 46, 40, 0.06);
+  box-shadow: 0 3px 10px rgba(38, 48, 34, 0.06);
 }
 
 .contact-details .label {
@@ -377,7 +411,7 @@ form {
   background: white;
   border-radius: 22px;
   padding: 32px;
-  box-shadow: 0 3px 14px rgba(58, 46, 40, 0.07);
+  box-shadow: 0 3px 14px rgba(38, 48, 34, 0.07);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -411,7 +445,7 @@ textarea { resize: vertical; min-height: 110px; }
   font-size: 0.94rem;
   margin-top: 2px;
   min-height: 1.2em;
-  color: var(--sage);
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -423,7 +457,7 @@ footer {
   font-size: 0.92rem;
 }
 
-footer a { color: #D8C3EE; }
+footer a { color: #CDE5BC; }
 
 .footer-row {
   display: flex;

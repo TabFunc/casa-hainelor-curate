@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Perfect Press Ironing</title>
-<meta name="description" content="Get in touch with Perfect Press Ironing, Aylesham — friendly laundry, ironing and cleaning.">
+<title>Contact | Casa hainelor curate</title>
+<meta name="description" content="Contactează Casa hainelor curate din Constanța: telefon, WhatsApp, email sau formular. Ridicare și livrare la ușă.">
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,13 +13,13 @@
 <header>
   <div class="nav">
     <a href="index.html" class="brand">
-      <img src="images/logo-basket.png" alt="Perfect Press Ironing" class="brand-icon">
-      Perfect Press Ironing
+      <img src="images/logo.svg" alt="" class="brand-icon">
+      Casa hainelor curate
     </a>
-    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <button class="nav-toggle" aria-label="Deschide meniul">&#9776;</button>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services &amp; Prices</a></li>
+      <li><a href="index.html">Acasă</a></li>
+      <li><a href="services.html">Servicii și prețuri</a></li>
       <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </div>
@@ -26,8 +27,8 @@
 
 <section class="hero" style="padding:48px 0 36px;">
   <div class="wrap center">
-    <h1 style="max-width:none;">Say hello</h1>
-    <p class="lead" style="margin-left:auto;margin-right:auto;">Tell us what you need done, roughly how much, and when — we'll get back to you with a price and the easiest way to drop off or arrange collection.</p>
+    <h1 style="max-width:none;">Hai să vorbim</h1>
+    <p class="lead" style="margin-left:auto;margin-right:auto;">Spune-ne ce haine ai, cam câte kilograme și când vrei să le ridicăm. Revenim rapid cu toate detaliile.</p>
   </div>
 </section>
 
@@ -36,39 +37,40 @@
 
     <div class="contact-details">
       <div class="item">
-        <div class="label">Email</div>
-        <p><a href="mailto:cin.cin.aylesham@gmail.com">cin.cin.aylesham@gmail.com</a></p>
+        <div class="label">Telefon</div>
+        <p><a href="tel:+40734309673">0734 309 673</a></p>
       </div>
       <div class="item">
         <div class="label">WhatsApp</div>
-        <p><a href="https://wa.me/447436921826?text=Hi%2C%20I%27d%20like%20to%20ask%20about%20laundry%20services" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+        <p><a href="https://wa.me/40734309673?text=Bun%C4%83%20ziua%2C%20a%C8%99%20dori%20informa%C8%9Bii%20despre%20serviciile%20de%20sp%C4%83l%C4%83torie." target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a></p>
       </div>
       <div class="item">
-        <div class="label">Area covered</div>
-        <p>Aylesham and nearby villages, Kent.</p>
+        <div class="label">Email</div>
+        <!-- ÎNLOCUIEȘTE adresa de mai jos (în ambele locuri) cu emailul real -->
+        <p><a href="mailto:ADAUGA-EMAILUL-AICI">ADAUGA-EMAILUL-AICI</a></p>
       </div>
       <div class="item">
-        <div class="label">Collection &amp; delivery</div>
-        <p>Aylesham: Mon–Fri after 5pm, any time at weekends.<br>Nearby villages: Thursdays &amp; Fridays after 5pm.</p>
+        <div class="label">Zonă</div>
+        <p>Constanța, serviciu door to door.</p>
       </div>
       <div class="item">
-        <div class="label">Payment</div>
-        <p>Cash or bank transfer, on collection or delivery.</p>
+        <div class="label">Termen</div>
+        <p>24-48 de ore, în funcție de serviciu și programare.</p>
       </div>
     </div>
 
     <div>
-      <form id="contact-form" action="https://formspree.io/f/mrenqnzk" method="POST">
-        <label for="name">Name</label>
+      <form id="contact-form" action="https://formspree.io/f/meaawbjj" method="POST">
+        <label for="name">Nume</label>
         <input type="text" id="name" name="name" required>
 
-        <label for="contact_info">Email or phone</label>
+        <label for="contact_info">Telefon sau email</label>
         <input type="text" id="contact_info" name="contact_info" required>
 
-        <label for="message">What do you need done?</label>
-        <textarea id="message" name="message" placeholder="E.g. a medium bag of clothes and a king bedding set — folded and packed please" required></textarea>
+        <label for="message">Ce haine ai de spălat?</label>
+        <textarea id="message" name="message" placeholder="Ex: aproximativ 5 kg de haine, spălat și călcat, ridicare mâine după-amiază" required></textarea>
 
-        <button type="submit" class="btn">Send message</button>
+        <button type="submit" class="btn">Trimite mesajul</button>
         <div class="form-status" id="form-status"></div>
       </form>
     </div>
@@ -78,8 +80,8 @@
 
 <footer>
   <div class="wrap footer-row">
-    <span>&copy; 2026 Perfect Press Ironing — Aylesham, Kent</span>
-    <span><a href="services.html">Services &amp; Prices</a></span>
+    <span>&copy; 2026 Casa hainelor curate &middot; Constanța</span>
+    <span><a href="services.html">Servicii și prețuri</a></span>
   </div>
 </footer>
 
@@ -89,23 +91,24 @@
 
   function setStatus(text, color) {
     var statusEl = document.getElementById('form-status');
-    if (!statusEl) {
-      console.warn('form-status element not found in the page; message was: ' + text);
-      return;
-    }
+    if (!statusEl) { return; }
     statusEl.textContent = text;
     statusEl.style.color = color || "";
   }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    setStatus("Sending...", "");
 
-    var data = new FormData(form);
+    if (form.action.indexOf('ID-FORMSPREE-AICI') !== -1) {
+      setStatus("Formularul nu este încă activ. Te rugăm să ne suni sau să ne scrii pe WhatsApp la 0734 309 673.", "#9A3B2E");
+      return;
+    }
+
+    setStatus("Se trimite...", "");
 
     fetch(form.action, {
       method: 'POST',
-      body: data,
+      body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     }).then(function (response) {
       return response.json().then(function (body) {
@@ -113,19 +116,15 @@
       });
     }).then(function (result) {
       if (result.ok) {
-        setStatus("Thanks! Your message has been sent — we'll get back to you soon.", "#8C9E7C");
+        setStatus("Mulțumim! Mesajul a fost trimis, revenim în curând.", "#3F7A35");
         form.reset();
       } else {
-        var errMsg = "Sorry, something went wrong. Please try again, or email us directly.";
-        if (result.body && result.body.errors && result.body.errors.length) {
-          errMsg = result.body.errors.map(function (er) { return er.message; }).join(' ');
-        }
-        setStatus(errMsg, "#7E5CA8");
+        setStatus("Ne pare rău, ceva n-a mers. Încearcă din nou sau sună-ne la 0734 309 673.", "#9A3B2E");
         console.error('Formspree error:', result.body);
       }
     }).catch(function (err) {
-      setStatus("Sorry, something went wrong. Please check your connection and try again.", "#7E5CA8");
-      console.error('Network/JS error submitting form:', err);
+      setStatus("Ne pare rău, ceva n-a mers. Verifică conexiunea și încearcă din nou.", "#9A3B2E");
+      console.error('Network error:', err);
     });
   });
 </script>
